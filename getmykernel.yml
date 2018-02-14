@@ -13,5 +13,5 @@
         yum:
           name: kernel-3.10.0-693.17.1.el7.x86_64
           state: present
-        when: {{ mykernel }} != {{ goodkernel }}
+        when: mykernel.rc != {{ goodkernel }}
         tags: Action
