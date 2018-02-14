@@ -1,0 +1,15 @@
+---
+
+- name: Non_Compliant_Group
+  hosts: web
+
+
+  tasks:
+
+    - name: Create_NonCompliant_Tower_Group
+      add_host:
+        name: NonCompliantKernel
+        groups: yes
+      tags: CreateGroup
+
+    
