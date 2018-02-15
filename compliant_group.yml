@@ -1,6 +1,6 @@
 ---
   - name: Update_Compliant_Group
-    hosts: web
+    hosts: localhost
     vars:
       - goodkernel: 3.10.0-693.17.1.el7.x86_64
 
@@ -11,5 +11,3 @@
           name: CompliantKernel
           groups: yes
         tags: CreateGroup
-
-      

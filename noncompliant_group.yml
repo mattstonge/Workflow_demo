@@ -1,7 +1,7 @@
 ---
 
 - name: Non_Compliant_Group
-  hosts: web
+  hosts: localhost
 
 
   tasks:
@@ -11,5 +11,3 @@
         name: NonCompliantKernel
         groups: yes
       tags: CreateGroup
-
-    
