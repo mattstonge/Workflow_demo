@@ -10,10 +10,3 @@
         command: "uname -r"
         register: mykernel
         tags: data_collection
-
-      - name: Compare
-        yum:
-          name: kernel-3.10.0-693.17.1.el7.x86_64
-          state: present
-        when: mykernel.stdout_lines != goodkernel
-        tags: Action
