@@ -1,6 +1,6 @@
 ---
   - name: Update_Compliant_Group
-    hosts: localhost
+    hosts: web
     vars:
       - goodkernel: 3.10.0-693.17.1.el7.x86_64
 
