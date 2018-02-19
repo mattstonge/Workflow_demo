@@ -14,4 +14,4 @@
       - name: TheVerdict
         fail:
           msg: "The Kernel is not at our determined version..."
-        when:  mykernel != goodkernel
+        when:  mykernel.stdout != goodkernel
