@@ -7,9 +7,8 @@
     tasks:
 
       - name: Get_Kernel_Version
-        command: "uname -r"
-        register: mykernel
+        setup:
         tags: data_collection
 
       - name: Confirm
-        command: echo " {{mykernel}}"
+        command: "echo {{ ansible_kernel }}"
