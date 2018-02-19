@@ -10,3 +10,6 @@
         command: "uname -r"
         register: mykernel
         tags: data_collection
+
+      - name: Confirm
+        command: echo " {{mykernel}}"
