@@ -7,8 +7,11 @@
     tasks:
 
       - name: Get_Kernel_Version
-        setup:
+        command: "uname -r"
+        register: mykernel
         tags: data_collection
 
-      - name: Confirm
-        command: "echo {{ ansible_kernel }}"
+      - name: TheVerdict
+        fail:
+          msg: "The Kernel is not at our determined version..."
+        when:  mykernel != goodkernel
