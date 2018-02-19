@@ -1,13 +1,17 @@
 ---
 
 - name: Non_Compliant_Group
-  hosts: localhost
-
+  hosts: web
+  vars:
+    - goodkernel: 3.10.0-693.17.1.el7.x86_64
 
   tasks:
 
-    - name: Create_NonCompliant_Tower_Group
-      add_host:
-        name: NonCompliantKernel
-        groups: yes
-      tags: CreateGroup
+    - name: Revalidate2
+      setup:
+      tags: data_collection
+
+    - name: TheVerdict2
+      fail:
+        msg: "Confirmed 2x the kernel is not right..."
+      when: ansible_kernel != goodkernel
