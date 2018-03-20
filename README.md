@@ -1,4 +1,4 @@
-# Workflow_demo
+# Workflow_demo (not complete - WIP)
 # By Matt St. Onge
 # 2/14/2018
 #
