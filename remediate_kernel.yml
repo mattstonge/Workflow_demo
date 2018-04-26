@@ -9,7 +9,13 @@
 
     - name: Remediate
       yum:
-        name: kernel-3.10.0-693.17.1.el7.x86_64
+        name: {{ goodkernel }}      
         state: present
       when: mykernel.stdout_lines != goodkernel
-      tags: Action
+      tags: new-kernel
+
+    - name: Reboot
+      command: reboot
+      async: 45
+      poll: 0
+      tags: reboot
